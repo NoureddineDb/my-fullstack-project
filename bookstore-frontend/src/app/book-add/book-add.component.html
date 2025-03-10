@@ -1,0 +1,11 @@
+<div>
+<form (ngSubmit)="addBook()">
+  <h2>Add Book</h2>
+  <input type="text" [(ngModel)]="book.title" name="title" required placeholder="Title">
+  <input type="text" [(ngModel)]="book.author" name="author" required placeholder="Author">
+  <input type="number" [(ngModel)]="book.price" name="price" required placeholder="Price">
+  <textarea [(ngModel)]="book.description" name="description" required placeholder="Description"></textarea>
+  <button type="submit">Add Book</button>
+</form>
+
+</div>

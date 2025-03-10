@@ -1,0 +1,18 @@
+<div>
+   <h1>UpdateBook</h1>
+<form (ngSubmit)="updateBook()">
+  <label for="title">Title:</label>
+  <input [(ngModel)]="book.title" name="title" id="title" />
+
+  <label for="author">Author:</label>
+  <input [(ngModel)]="book.author" name="author" id="author" />
+
+  <label for="price">Price:</label>
+  <input [(ngModel)]="book.price" name="price" id="price" />
+
+  <label for="description">Description:</label>
+  <input [(ngModel)]="book.description" name="description" id="description" />
+
+  <button type="submit">Update Book</button>
+</form>
+</div>

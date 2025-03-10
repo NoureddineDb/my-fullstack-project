@@ -1,0 +1,54 @@
+nav {
+  background-color: #000000; /* Black background */
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #f1f1f1; /* Light gray text */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  display: block;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  background-color: #ff6347; /* Tomato red background on hover */
+  color: white; /* White text on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+nav ul li a.router-link-active {
+  background-color: #32cd32; /* Lime green background for active link */
+  color: white; /* Text turns white when active */
+  font-weight: 600; /* Make the active text bold */
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}

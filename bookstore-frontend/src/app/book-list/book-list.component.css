@@ -1,0 +1,114 @@
+/* Main book list container */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px; /* تحديد أقصى عرض لتحسين التصميم */
+  margin: 0 auto; /* لجعل العنصر في منتصف الصفحة */
+  background-color: #f0f4f8; /* Light grayish background */
+}
+
+/* Each individual book item */
+.book {
+  border: 1px solid #193388; /* Light blue border */
+  padding: 20px;
+  border-radius: 10px; /* Zawaya more softness */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+  background-color: #ffffff; /* White background */
+}
+
+.book:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Title of the book */
+.book-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1f3c73; /* Dark blue color for title */
+  margin-bottom: 12px;
+}
+
+/* Author name */
+.book-author,
+.book-price,
+.book-description {
+  font-size: 1rem;
+  color: #4f5d73; /* Softer grayish color for text */
+  margin-top: 8px;
+}
+
+/* Styling for the book author */
+.book-author {
+  font-style: italic; /* Make the author name italic */
+}
+
+/* Price of the book */
+.book-price {
+  font-weight: bold;
+  color: #ff6f61; /* Coral color for price */
+}
+
+/* Description of the book */
+.book-description {
+  font-size: 0.9rem;
+  color: #7a8a98; /* Lighter gray color for description */
+}
+
+/* Action buttons container */
+.book-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Button styles */
+.book-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 90px;
+  font-weight: bold;
+}
+
+/* Edit button styling */
+.book-actions button:first-child {
+  background-color: #47a3f0; /* Soft blue */
+  color: white;
+}
+
+.book-actions button:first-child:hover {
+  background-color: #2a82c5; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* Delete button styling */
+.book-actions button:last-child {
+  background-color: #ff6347; /* Tomato red */
+  color: white;
+}
+
+.book-actions button:last-child:hover {
+  background-color: #e53e34; /* Darker tomato red on hover */
+  transform: scale(1.05);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .book-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .book-list {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
