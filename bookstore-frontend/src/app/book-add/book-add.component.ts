@@ -26,23 +26,25 @@ export class BookAddComponent implements OnInit {
 
   ngOnInit(): void {}
   addBook() {
-    console.log('Adding book:', this.book);
-    this.bookService.addBook(this.book).subscribe({
+    // Create a copy of the book and set the ID to null to avoid setting it manually
+    const bookToAdd = { ...this.book, id: null }; // Spread the properties of 'this.book' and override the 'id'
+
+    this.bookService.addBook(bookToAdd).subscribe({
       next: (response) => {
         console.log('Book added successfully!', response);
         this.router.navigate(['/list']);
       },
       error: (error) => {
         console.error('Error adding book:', error);
-
         if (error instanceof HttpErrorResponse) {
           console.error('Error status:', error.status);
           console.error('Error message:', error.message);
-          console.error('Full error:', error);
         }
       },
     });
   }
 
+  }
 
-}
+
+

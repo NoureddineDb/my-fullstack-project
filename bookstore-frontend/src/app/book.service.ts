@@ -18,6 +18,7 @@ export class BookService {
 
 
   addBook(book: Book): Observable<Book> {
+    console.log('Sending book:', book);
     return this.http.post<Book>(this.apiUrl, book, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
